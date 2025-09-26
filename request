@@ -1,0 +1,9 @@
+import requests
+
+# GET all users
+resp = requests.get("http://127.0.0.1:5000/users")
+print(resp.json())
+
+# POST new user
+resp = requests.post("http://127.0.0.1:5000/users", json={"name": "Charlie", "email": "charlie@example.com"})
+print(resp.json())
